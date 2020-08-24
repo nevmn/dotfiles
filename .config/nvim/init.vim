@@ -109,6 +109,7 @@ nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 nnoremap <silent> gF    <cmd>lua vim.lsp.buf.formatting_sync()<CR>
+nnoremap <silent> gA    <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> gnd   :NextDiagnosticCycle<CR>
 nnoremap <silent> gpd   :PrevDiagnosticCycle<CR>
 
