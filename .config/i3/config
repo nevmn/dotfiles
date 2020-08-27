@@ -190,3 +190,4 @@ exec_always "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_sh
 exec_always --no-startup-id picom -b
 exec --no-startup-id pasystray
 exec --no-startup-id gxkb
+exec --no-startup-id kdeconnect-indicator
