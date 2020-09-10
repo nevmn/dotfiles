@@ -19,3 +19,5 @@ export PATH="$HOME/.local/bin:$PATH"
 
 export HISTSIZE=10000
 export HISTFILESIZE=10000
+
+source /usr/share/nvm/init-nvm.sh
