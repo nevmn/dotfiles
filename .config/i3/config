@@ -191,3 +191,4 @@ exec_always --no-startup-id picom -b
 exec --no-startup-id pasystray
 exec --no-startup-id gxkb
 exec --no-startup-id kdeconnect-indicator
+exec --no-startup-id octopi-notifier
