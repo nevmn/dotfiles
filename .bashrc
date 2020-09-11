@@ -15,7 +15,7 @@ shopt -s checkwinsize	# line wrap on window resize
 
 export TERMINAL=kitty
 
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 
 export HISTSIZE=10000
 export HISTFILESIZE=10000
