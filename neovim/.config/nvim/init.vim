@@ -80,6 +80,9 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'neovim/nvim-lsp'
     Plug 'nvim-lua/completion-nvim'
     Plug 'nvim-lua/diagnostic-nvim'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-lua/telescope.nvim'
 call plug#end()
 
 let g:camelcasemotion_key = '<leader>'

@@ -121,9 +121,6 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
-alias ls='ls --color=auto'
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 set -o noclobber	# prevent overwrite of files
 
 export TERMINAL=kitty
