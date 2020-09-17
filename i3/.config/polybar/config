@@ -261,6 +261,7 @@ label-volume =  %percentage%%
 label-volume-foreground = ${colors.foreground}
 label-muted = muted
 label-muted-foreground = ${colors.foreground}
+label-muted-padding = 1
 click-right = pavucontrol & 
 
 [module/battery]
