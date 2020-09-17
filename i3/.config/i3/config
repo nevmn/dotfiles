@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Fira Code 8
+font pango:monospace 8
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -31,9 +31,10 @@ font pango:Fira Code 8
 #exec --no-startup-id nm-applet
 
 # Disabling 
-for_window [class=".*"] border pixel 3
+for_window [class=".*"] border pixel 0
 
-gaps bottom 26
+gaps inner 10
+gaps bottom 28
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status

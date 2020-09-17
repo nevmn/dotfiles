@@ -37,28 +37,30 @@ alert = #fb4934
 
 [bar/bar]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 100%
+width = 99%
 height = 26
-;offset-x = 1%
-;offset-y = 1%
+offset-x = 10
+offset-y = 5
 wm-restack = i3
 fixed-center = true
 bottom = true
 background = ${colors.background}
 foreground = ${colors.foreground}
-line-size = 2
+line-size = 0
 line-color = ${colors.foreground}
 border-size = 0
 border-color = ${colors.foreground-alt}
 padding-left = 0
-padding-right = 1
-module-margin-left = 1
-module-margin-right = 1
-font-0 = monospace:size=9;0
-font-1 = FontAwesome:size=12;2
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
+font-0 = monospace:size=9;2
+font-1 = "Font Awesome 5 Free:style=Regular:size=9;2"
+font-2 = "Font Awesome 5 Free:style=Solid:size=9;2"
+font-3 = "Font Awesome 5 Brands:style:size=9;2"
 modules-left = i3
 modules-center = mpd
-modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = filesystem separator pulseaudio separator xkeyboard separator memory separator cpu separator  eth separator date separator powermenu separator
 tray-detached = false
 tray-position = right
 ;tray-background = #0063ff
@@ -80,12 +82,14 @@ layout-icon-0 = us; US
 layout-icon-1 = ru; RU
 label-layout = %icon%
 label-layout-underline = ${colors.white}
-label-layout-padding = 1
+label-layout-padding-left = 1
 label-layout-foreground = ${colors.foreground}
-label-indicator-on-underline = ${colors.red}
-label-indicator-off-underline = ${colors.red}
 label-indicator-on = %icon%
 label-indicator-off = %icon%
+label-indicator-on-underline = ${colors.red}
+label-indicator-off-underline = ${colors.red}
+label-indicator-on-padding-right = 1
+label-indicator-off-padding-right = 1
 indicator-icon-0 = caps lock;;+CL
 indicator-icon-1 = scroll lock;;+SL
 indicator-icon-2 = num lock;-NL;
@@ -97,7 +101,7 @@ mount-0 = /
 mount-1 = /home
 format-mounted = <label-mounted>
 format-mounted-underline = ${colors.foreground}
-label-mounted = %{F#95aec7}%mountpoint%%{F-}: %used% %free%
+label-mounted = %{F#95aec7}%mountpoint%%{F-}: %used%/%free%
 label-mounted-padding = 1
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.red}
@@ -146,11 +150,11 @@ ws-icon-9 = 10;10
 type = internal/mpd
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
 
 label-song-maxlen = 25
 label-song-ellipsis = true
@@ -165,10 +169,10 @@ bar-width = 10
 bar-indicator = |
 bar-indicator-foreground = #fff
 bar-indicator-font = 2
-bar-fill = ─
+bar-fill = 
 bar-fill-font = 2
 bar-fill-foreground = #9f78e1
-bar-empty = ─
+bar-empty = 
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
 
@@ -180,18 +184,22 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
-label = %percentage:2%%
+format-prefix = 
+format-prefix-padding-left = 1
+format-prefix-foreground = ${colors.foreground}
+format-underline = ${colors.foreground}
+label = %percentage%%
+label-padding = 1
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
-label = %percentage_used%%
+format-prefix = 
+format-prefix-foreground = ${colors.foreground}
+format-prefix-padding-left = 1
+format-underline = ${colors.foreground}
+label = %gb_used%/%gb_free%
+label-padding = 1
 
 [module/wlan]
 type = internal/network
@@ -290,27 +298,23 @@ animation-discharging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
+thermal-zone = 1
 warn-temperature = 60
 
-format = <ramp> <label>
-format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+format = <label>
+format-underline = ${colors.foreground}
+format-padding = 1
+format-warn = <label-warn>
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
+label-warn-foreground = ${colors.red}
 
 [module/powermenu]
 type = custom/menu
 expand-right = true
 format-spacing = 1
+format-padding = 1
 label-open = 
 label-open-foreground = ${colors.secondary}
 label-close =  cancel
@@ -329,6 +333,11 @@ menu-2-0 =  power off
 menu-2-0-exec = systemctl poweroff
 menu-2-1 =  cancel
 menu-2-1-exec = menu-open-0
+
+[module/separator]
+type = custom/text
+content = |
+content-foreground = ${colors.foreground}
 
 [settings]
 screenchange-reload = true
