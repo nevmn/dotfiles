@@ -22,11 +22,12 @@ orange = ${xrdb:color9}
 white = #ebdbb2
 gray = #585858
 black = #090909
-red = #c795ae
+;red = #c795ae
+red = ${xrdb:color1}
 blue = #95aec7
 yellow = #c7ae95
 green = #aec795
-background = #262626
+background = ${xrdb:background}
 background-alt = #4e4e4e
 foreground = ${xrdb:foreground}
 foreground-alt = #4e4e4e
@@ -45,19 +46,19 @@ fixed-center = true
 bottom = true
 background = ${colors.background}
 foreground = ${colors.foreground}
-line-size = 3
-line-color = #f00
+line-size = 2
+line-color = ${colors.foreground}
 border-size = 0
-border-color = #00000000
+border-color = ${colors.foreground-alt}
 padding-left = 0
-padding-right = 2
+padding-right = 0
 module-margin-left = 1
-module-margin-right = 2
-font-0 = FiraCode:style=Regular:size=10;0
-font-1 = FontAwesome:pixelsize=12;2
+module-margin-right = 1
+font-0 = monospace:size=9;0
+font-1 = FontAwesome:size=12;2
 modules-left = i3
 modules-center = mpd
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 tray-detached = false
 tray-position = right
 tray-padding = 2
@@ -74,19 +75,22 @@ label = %title:0:30:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
-
-label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+;blacklist-0 = num lock
+format = <label-layout> <label-indicator>
+format-spacing = 0
+layout-icon-0 = us; US
+layout-icon-1 = ru; RU
+label-layout = %icon%
+label-layout-underline = ${colors.white}
+label-layout-padding = 0
+label-layout-foreground = ${colors.foreground}
+label-indicator-on-underline = ${colors.red}
+label-indicator-off-underline = ${colors.red}
+label-indicator-on = %icon%
+label-indicator-off = %icon%
+indicator-icon-0 = caps lock;;+CL
+indicator-icon-1 = scroll lock;;+SL
+indicator-icon-2 = num lock;-NL;
 
 [module/filesystem]
 type = internal/fs
@@ -373,6 +377,11 @@ menu-2-0 =  power off
 menu-2-0-exec = systemctl poweroff
 menu-2-1 =  cancel
 menu-2-1-exec = menu-open-0
+
+[module/separator]
+type = custom/text
+content = |
+content-foreground = #4e4e4e
 
 [settings]
 screenchange-reload = true
