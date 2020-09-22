@@ -31,15 +31,15 @@ font pango:monospace 8
 #exec --no-startup-id nm-applet
 
 # Disabling 
-for_window [class=".*"] border pixel 0
-
-gaps inner 10
-gaps bottom 28
+#for_window [class=".*"] border pixel 3
+#
+#gaps inner 10
+#gaps bottom 28
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -188,12 +188,13 @@ for_window [class="KeePassXC" instance="keepassxc"] floating enable
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#        status_command i3status
-#}
+bar {
+        status_command i3status
+}
 
 exec_always "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id pasystray
+exec --no-startup-id gxkb
 exec_always --no-startup-id $HOME/.config/picom/launch.sh
