@@ -77,6 +77,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'bkad/CamelCaseMotion'
     "Plug 'majutsushi/tagbar'
     Plug 'morhetz/gruvbox'
+    Plug 'lifepillar/vim-gruvbox8'
     Plug 'neovim/nvim-lsp'
     Plug 'nvim-lua/completion-nvim'
     Plug 'nvim-lua/diagnostic-nvim'
@@ -91,7 +92,7 @@ nnoremap <silent> <F2> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+colorscheme gruvbox8_hard
 
 let g:indentLine_leadingSpaceEnabled = 1
 
