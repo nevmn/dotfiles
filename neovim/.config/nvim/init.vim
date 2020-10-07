@@ -70,6 +70,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'shinchu/lightline-gruvbox.vim'
     "Plug 'editorconfig/editorconfig-vim'
     Plug 'nelsyeung/twig.vim'
+    Plug 'mattn/emmet-vim'
     "Plug 'honza/vim-snippets'
     Plug 'pangloss/vim-javascript'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -78,7 +79,7 @@ call plug#begin(stdpath('data') . '/plugged')
     "Plug 'majutsushi/tagbar'
     Plug 'morhetz/gruvbox'
     Plug 'lifepillar/vim-gruvbox8'
-    Plug 'neovim/nvim-lsp'
+    Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
     Plug 'nvim-lua/diagnostic-nvim'
     Plug 'nvim-lua/popup.nvim'
@@ -117,7 +118,7 @@ nnoremap <silent> gA    <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> gnd   :NextDiagnosticCycle<CR>
 nnoremap <silent> gpd   :PrevDiagnosticCycle<CR>
 
-nnoremap <silent> <F3> :FZF<CR>
+nnoremap <silent> <F3> :Files<CR>
 
 autocmd Filetype * setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
@@ -150,7 +151,6 @@ nvim_lsp.html.setup{
     on_attach = on_attach_vim
 }
 nvim_lsp.jsonls.setup{
-    cmd = {"json-languageserver", "--stdio"},
     on_attach = on_attach_vim
 }
 nvim_lsp.rust_analyzer.setup{
