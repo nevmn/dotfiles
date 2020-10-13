@@ -69,10 +69,11 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'itchyny/lightline.vim'
     Plug 'shinchu/lightline-gruvbox.vim'
     "Plug 'editorconfig/editorconfig-vim'
-    Plug 'nelsyeung/twig.vim'
+    "Plug 'nelsyeung/twig.vim'
     Plug 'mattn/emmet-vim'
     "Plug 'honza/vim-snippets'
-    Plug 'pangloss/vim-javascript'
+    "Plug 'pangloss/vim-javascript'
+    "Plug 'posva/vim-vue'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'bkad/CamelCaseMotion'
@@ -85,6 +86,9 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-lua/telescope.nvim'
+    Plug 'kdheepak/lazygit.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 call plug#end()
 
 let g:camelcasemotion_key = '<leader>'
@@ -170,5 +174,12 @@ nvim_lsp.clangd.setup{
 }
 nvim_lsp.hie.setup{
     on_attach = on_attach_vim
+}
+
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {"php", "vue", "typescript", "javascript", "json", "yaml", "html", "regex", "css"},
+  highlight = {
+    enable = true,
+  },
 }
 EOF
