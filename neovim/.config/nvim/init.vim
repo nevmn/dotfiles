@@ -69,7 +69,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'itchyny/lightline.vim'
     Plug 'shinchu/lightline-gruvbox.vim'
     "Plug 'editorconfig/editorconfig-vim'
-    "Plug 'nelsyeung/twig.vim'
+    Plug 'nelsyeung/twig.vim'
     Plug 'mattn/emmet-vim'
     "Plug 'honza/vim-snippets'
     "Plug 'pangloss/vim-javascript'
@@ -89,6 +89,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'kdheepak/lazygit.nvim'
     Plug 'nvim-treesitter/nvim-treesitter'
     Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+    Plug 'aserebryakov/vim-todo-lists'
 call plug#end()
 
 let g:camelcasemotion_key = '<leader>'
