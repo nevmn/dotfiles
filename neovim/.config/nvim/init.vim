@@ -102,7 +102,20 @@ colorscheme gruvbox8_hard
 
 let g:indentLine_leadingSpaceEnabled = 1
 
-let g:lightline = {}
+let g:lightline = {
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \ }
+      \ }
+
+function! LightlineFilename()
+  let root = fnamemodify(get(b:, 'git_dir'), ':h')
+  let path = expand('%:p')
+  if path[:len(root)-1] ==# root
+    return path[len(root)+1:]
+  endif
+  return expand('%')
+endfunction
 let g:lightline.colorscheme = 'gruvbox'
 let g:lightline_gruvbox_style  = 'hard_left'
 
