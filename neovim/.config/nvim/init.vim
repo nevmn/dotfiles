@@ -186,12 +186,12 @@ nvim_lsp.tsserver.setup{
 nvim_lsp.clangd.setup{
     on_attach = on_attach_vim
 }
-nvim_lsp.hie.setup{
+nvim_lsp.hls.setup{
     on_attach = on_attach_vim
 }
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"php", "vue", "typescript", "javascript", "json", "yaml", "html", "regex", "css"},
+  ensure_installed = {"php", "vue", "typescript", "javascript", "json", "yaml", "html", "regex", "css", "c", "jsdoc", "cpp", "toml", "rust", "haskell"},
   highlight = {
     enable = true,
   },
