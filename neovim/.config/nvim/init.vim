@@ -82,7 +82,6 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'lifepillar/vim-gruvbox8'
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
-    Plug 'nvim-lua/diagnostic-nvim'
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-lua/telescope.nvim'
@@ -133,8 +132,8 @@ nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 nnoremap <silent> gF    <cmd>lua vim.lsp.buf.formatting_sync()<CR>
 nnoremap <silent> gA    <cmd>lua vim.lsp.buf.code_action()<CR>
-nnoremap <silent> gnd   :NextDiagnosticCycle<CR>
-nnoremap <silent> gpd   :PrevDiagnosticCycle<CR>
+nnoremap <silent> gnd   <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <silent> gpd   <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 
 nnoremap <silent> <F3> :Files<CR>
 
@@ -151,10 +150,9 @@ lua << EOF
 
 local on_attach_vim = function()
   require'completion'.on_attach()
-  require'diagnostic'.on_attach()
 end
 
-local nvim_lsp = require'nvim_lsp'
+local nvim_lsp = require'lspconfig'
 
 nvim_lsp.intelephense.setup{
     on_attach = on_attach_vim
@@ -187,6 +185,9 @@ nvim_lsp.clangd.setup{
     on_attach = on_attach_vim
 }
 nvim_lsp.hls.setup{
+    on_attach = on_attach_vim
+}
+nvim_lsp.bashls.setup{
     on_attach = on_attach_vim
 }
 
