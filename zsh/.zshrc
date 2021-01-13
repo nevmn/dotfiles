@@ -139,3 +139,13 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 bindkey \^U backward-kill-line
 
+function enabletor() {
+    export http_proxy="socks5://127.0.0.1:9050"
+    export https_proxy="socks5://127.0.0.1:9050"
+    export all_proxy="socks5://127.0.0.1:9050"
+    export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+}
+
+function disabletor() {
+    unset {http,https,all}_proxy
+}
