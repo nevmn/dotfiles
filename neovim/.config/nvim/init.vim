@@ -59,47 +59,45 @@ if maparg('<C-L>', 'n') ==# ''
     nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
 
-"call plug#begin(stdpath('data') . '/plugged')
-"    Plug 'tpope/vim-surround'
-"    Plug 'tpope/vim-fugitive'
-"    Plug 'airblade/vim-gitgutter'
-"    "Plug 'preservim/nerdtree'
-"    "Plug 'Xuyuanp/nerdtree-git-plugin'
-"    Plug 'kyazdani42/nvim-web-devicons' " for file icons
-"    Plug 'kyazdani42/nvim-tree.lua'
-"    Plug 'easymotion/vim-easymotion'
-"    Plug 'itchyny/lightline.vim'
-"    Plug 'shinchu/lightline-gruvbox.vim'
-"    "Plug 'editorconfig/editorconfig-vim'
-"    Plug 'nelsyeung/twig.vim'
-"    Plug 'mattn/emmet-vim'
-"    "Plug 'honza/vim-snippets'
-"    "Plug 'pangloss/vim-javascript'
-"    "Plug 'posva/vim-vue'
-"    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"    Plug 'junegunn/fzf.vim'
-"    Plug 'bkad/CamelCaseMotion'
-"    "Plug 'majutsushi/tagbar'
-"    Plug 'morhetz/gruvbox'
-"    Plug 'lifepillar/vim-gruvbox8'
-"    Plug 'neovim/nvim-lspconfig'
-"    Plug 'nvim-lua/completion-nvim'
-"    Plug 'nvim-lua/popup.nvim'
-"    Plug 'nvim-lua/plenary.nvim'
-"    Plug 'nvim-lua/telescope.nvim'
-"    Plug 'kdheepak/lazygit.nvim'
-"    Plug 'nvim-treesitter/nvim-treesitter'
-"    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-"    Plug 'aserebryakov/vim-todo-lists'
-"call plug#end()
+call plug#begin(stdpath('data') . '/plugged')
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'preservim/nerdtree'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'easymotion/vim-easymotion'
+    Plug 'itchyny/lightline.vim'
+    Plug 'shinchu/lightline-gruvbox.vim'
+    "Plug 'editorconfig/editorconfig-vim'
+    Plug 'nelsyeung/twig.vim'
+    Plug 'mattn/emmet-vim'
+    "Plug 'honza/vim-snippets'
+    "Plug 'pangloss/vim-javascript'
+    "Plug 'posva/vim-vue'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'bkad/CamelCaseMotion'
+    "Plug 'majutsushi/tagbar'
+    Plug 'morhetz/gruvbox'
+    Plug 'lifepillar/vim-gruvbox8'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'nvim-lua/completion-nvim'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-lua/telescope.nvim'
+    Plug 'kdheepak/lazygit.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+    Plug 'aserebryakov/vim-todo-lists'
+call plug#end()
 
 let g:camelcasemotion_key = '<leader>'
 
-"nnoremap <silent> <F2> :NERDTreeToggle<CR>
-"let NERDTreeQuitOnOpen=1
-nnoremap <silent> <F2> :NvimTreeToggle<CR>
+nnoremap <silent> <F2> :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
 
 let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox8_hard
 
 let g:indentLine_leadingSpaceEnabled = 1
 
@@ -139,6 +137,7 @@ nnoremap <silent> gpd   <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 
 nnoremap <silent> <F3> :Files<CR>
 
+autocmd Filetype * setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -147,10 +146,4 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "map <c-p> to manually trigger completion
 inoremap <silent><expr> <c-p> completion#trigger_completion() 
 
-:lua require('plugins')
-
-autocmd Filetype * setlocal omnifunc=v:lua.vim.lsp.omnifunc
-autocmd BufWritePost plugins.lua PackerCompile
-autocmd BufEnter * lua require'completion'.on_attach()
-
-colorscheme gruvbox8_hard
+:lua require('init')
