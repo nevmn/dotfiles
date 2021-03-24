@@ -167,6 +167,7 @@ nvim_lsp.html.setup{
     on_attach = on_attach_vim
 }
 nvim_lsp.jsonls.setup{
+    cmd = { "json-languageserver", "--stdio" },
     on_attach = on_attach_vim
 }
 nvim_lsp.rust_analyzer.setup{
