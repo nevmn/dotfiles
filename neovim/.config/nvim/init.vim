@@ -49,6 +49,7 @@ set shortmess+=c
 
 " enable Normal mode keys in ru layout
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
 syntax on
 filetype plugin indent on
 
@@ -91,6 +92,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'nvim-treesitter/nvim-treesitter'
     Plug 'nvim-treesitter/nvim-treesitter-textobjects'
     Plug 'aserebryakov/vim-todo-lists'
+    Plug 'tikhomirov/vim-glsl'
 call plug#end()
 
 let g:camelcasemotion_key = '<leader>'
