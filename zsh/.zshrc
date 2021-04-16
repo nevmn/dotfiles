@@ -87,7 +87,7 @@ ZSH_CUSTOM=/usr/share/zsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions docker nvm fzf systemadmin git)
+plugins=(zsh-autosuggestions docker nvm fzf systemadmin git docker-compose)
 
 
 # User configuration
