@@ -198,6 +198,9 @@ nvim_lsp.bashls.setup{
 nvim_lsp.yamlls.setup{
     on_attach = on_attach_vim
 }
+nvim_lsp.dhall_lsp_server.setup{
+    on_attach = on_attach_vim
+}
 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {"php", "vue", "typescript", "javascript", "json", "yaml", "html", "regex", "css", "c", "jsdoc", "cpp", "toml", "rust", "haskell"},
