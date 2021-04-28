@@ -67,7 +67,7 @@ call plug#begin(stdpath('data') . '/plugged')
     "Plug 'tpope/vim-fugitive'
     "Plug 'airblade/vim-gitgutter'
     "Plug 'preservim/nerdtree'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
+    "Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'easymotion/vim-easymotion'
     Plug 'itchyny/lightline.vim'
     Plug 'shinchu/lightline-gruvbox.vim'
@@ -83,8 +83,8 @@ call plug#begin(stdpath('data') . '/plugged')
     "Plug 'majutsushi/tagbar'
     Plug 'morhetz/gruvbox'
     Plug 'lifepillar/vim-gruvbox8'
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'nvim-lua/completion-nvim'
+    "Plug 'neovim/nvim-lspconfig'
+    "Plug 'nvim-lua/completion-nvim'
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-lua/telescope.nvim'
@@ -154,55 +154,6 @@ inoremap <silent><expr> <c-p> completion#trigger_completion()
 
 lua << EOF
 require('plugins')
-local on_attach_vim = function()
-  require'completion'.on_attach()
-end
-
-local nvim_lsp = require'lspconfig'
-
-nvim_lsp.intelephense.setup{
-    on_attach = on_attach_vim
-}
-nvim_lsp.cssls.setup{
-    on_attach = on_attach_vim
-}
-nvim_lsp.dockerls.setup{
-    on_attach = on_attach_vim
-}
-nvim_lsp.html.setup{
-    on_attach = on_attach_vim
-}
-nvim_lsp.jsonls.setup{
-    cmd = { "json-languageserver", "--stdio" },
-    on_attach = on_attach_vim
-}
-nvim_lsp.rust_analyzer.setup{
-    on_attach = on_attach_vim
-}
-nvim_lsp.vimls.setup{
-    on_attach = on_attach_vim
-}
-nvim_lsp.vuels.setup{
-    on_attach = on_attach_vim
-}
-nvim_lsp.tsserver.setup{
-    on_attach = on_attach_vim
-}
-nvim_lsp.clangd.setup{
-    on_attach = on_attach_vim
-}
-nvim_lsp.hls.setup{
-    on_attach = on_attach_vim
-}
-nvim_lsp.bashls.setup{
-    on_attach = on_attach_vim
-}
-nvim_lsp.yamlls.setup{
-    on_attach = on_attach_vim
-}
-nvim_lsp.dhall_lsp_server.setup{
-    on_attach = on_attach_vim
-}
 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {"php", "vue", "typescript", "javascript", "json", "yaml", "html", "regex", "css", "c", "jsdoc", "cpp", "toml", "rust", "haskell"},
