@@ -63,10 +63,10 @@ if maparg('<C-L>', 'n') ==# ''
 endif
 
 call plug#begin(stdpath('data') . '/plugged')
-    Plug 'tpope/vim-surround'
-    Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'preservim/nerdtree'
+    "Plug 'tpope/vim-surround'
+    "Plug 'tpope/vim-fugitive'
+    "Plug 'airblade/vim-gitgutter'
+    "Plug 'preservim/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'easymotion/vim-easymotion'
     Plug 'itchyny/lightline.vim'
@@ -97,7 +97,7 @@ call plug#end()
 
 let g:camelcasemotion_key = '<leader>'
 
-nnoremap <silent> <F2> :NERDTreeToggle<CR>
+nnoremap <silent> <F2> :NvimTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 
 let g:gruvbox_contrast_dark = 'hard'
@@ -141,6 +141,8 @@ nnoremap <silent> gpd   <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 
 nnoremap <silent> <F3> :Files<CR>
 
+autocmd BufWritePost plugins.lua PackerCompile
+
 autocmd Filetype * setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
@@ -151,7 +153,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <silent><expr> <c-p> completion#trigger_completion() 
 
 lua << EOF
-
+require('plugins')
 local on_attach_vim = function()
   require'completion'.on_attach()
 end
