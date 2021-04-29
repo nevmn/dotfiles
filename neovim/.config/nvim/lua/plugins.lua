@@ -13,7 +13,9 @@ return require('packer').startup(function ()
     }
 
     --use 'preservim/nerdtree'
+    use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
+    use 'romgrk/barbar.nvim'
 
     use {
         'neovim/nvim-lspconfig',
