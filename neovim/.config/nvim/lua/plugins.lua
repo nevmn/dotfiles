@@ -1,12 +1,20 @@
---vim.cmd [[packadd packer.nvim]]
+vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function ()
     use 'wbthomason/packer.nvim'
     use 'tpope/vim-surround'
     use 'tpope/vim-fugitive'
     use 'airblade/vim-gitgutter'
+    use 'easymotion/vim-easymotion'
+
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    }
+
     --use 'preservim/nerdtree'
     use 'kyazdani42/nvim-tree.lua'
+
     use {
         'neovim/nvim-lspconfig',
         requires = {'nvim-lua/completion-nvim'},
@@ -101,4 +109,12 @@ return require('packer').startup(function ()
             }
         end
     }
+
+    use {
+        'glepnir/lspsaga.nvim',
+        config = function()
+            require'lspsaga'.init_lsp_saga()
+        end
+    }
+
 end)
