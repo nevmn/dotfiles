@@ -125,7 +125,7 @@ set -o noclobber	# prevent overwrite of files
 
 export TERMINAL=kitty
 
-export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.symfony/bin:$PATH"
 
 export HISTSIZE=10000
 export HISTFILESIZE=10000
