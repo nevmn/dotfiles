@@ -66,8 +66,8 @@ call plug#begin(stdpath('data') . '/plugged')
     "Plug 'tpope/vim-surround'
     "Plug 'tpope/vim-fugitive'
     "Plug 'airblade/vim-gitgutter'
-    "Plug 'preservim/nerdtree'
-    "Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'preservim/nerdtree'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
     "Plug 'easymotion/vim-easymotion'
     Plug 'itchyny/lightline.vim'
     Plug 'shinchu/lightline-gruvbox.vim'
@@ -97,7 +97,7 @@ call plug#end()
 
 let g:camelcasemotion_key = '<leader>'
 
-nnoremap <silent> <F2> :NvimTreeToggle<CR>
+nnoremap <silent> <F2> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 
 let g:gruvbox_contrast_dark = 'hard'
