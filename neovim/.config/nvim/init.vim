@@ -147,8 +147,6 @@ nnoremap <silent> gpd   <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic
 
 nnoremap <silent> <F3> :Files<CR>
 
-autocmd BufWritePost plugins.lua PackerCompile
-
 autocmd Filetype * setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
 " Use <Tab> and <S-Tab> to navigate through popup menu

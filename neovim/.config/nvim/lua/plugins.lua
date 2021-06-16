@@ -12,10 +12,16 @@ return require('packer').startup(function ()
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
 
-    --use 'preservim/nerdtree'
-    --use 'kyazdani42/nvim-web-devicons'
+    use 'preservim/nerdtree'
+    use 'kyazdani42/nvim-web-devicons'
     --use 'kyazdani42/nvim-tree.lua'
     --use 'romgrk/barbar.nvim'
+    --use {
+    --    'glepnir/galaxyline.nvim',
+    --    branch = 'main',
+    --    config = function() require'statusline' end,
+    --    requires = {{'kyazdani42/nvim-web-devicons', opt = true}}
+    --}
 
     use {
         'neovim/nvim-lspconfig',
@@ -32,12 +38,14 @@ return require('packer').startup(function ()
                 on_attach = on_attach_vim
             }
             nvim_lsp.cssls.setup{
+                cmd = { "css-languageserver", "--stdio" },
                 on_attach = on_attach_vim
             }
             nvim_lsp.dockerls.setup{
                 on_attach = on_attach_vim
             }
             nvim_lsp.html.setup{
+                cmd = { "html-languageserver", "--stdio" },
                 on_attach = on_attach_vim
             }
             nvim_lsp.jsonls.setup{
@@ -118,5 +126,13 @@ return require('packer').startup(function ()
             require'lspsaga'.init_lsp_saga()
         end
     }
+
+    --use {
+    --    'lewis6991/gitsigns.nvim',
+    --    requires = {'nvim-lua/plenary.nvim'},
+    --    config = function ()
+    --        require'gitsigns'.setup()
+    --    end
+    --}
 
 end)
