@@ -1,27 +1,40 @@
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function ()
+return require('packer').startup({function ()
     use 'wbthomason/packer.nvim'
     use 'tpope/vim-surround'
     use 'tpope/vim-fugitive'
     use 'airblade/vim-gitgutter'
     use 'easymotion/vim-easymotion'
 
+    use 'preservim/nerdtree'
+    use 'Xuyuanp/nerdtree-git-plugin'
+
+    use {'itchyny/lightline.vim', 'shinchu/lightline-gruvbox.vim'}
+
+    use 'nelsyeung/twig.vim'
+    use 'mattn/emmet-vim'
+
     use {
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
 
-    use 'preservim/nerdtree'
     use 'kyazdani42/nvim-web-devicons'
-    --use 'kyazdani42/nvim-tree.lua'
-    --use 'romgrk/barbar.nvim'
-    --use {
-    --    'glepnir/galaxyline.nvim',
-    --    branch = 'main',
-    --    config = function() require'statusline' end,
-    --    requires = {{'kyazdani42/nvim-web-devicons', opt = true}}
-    --}
+
+    use 'bkad/CamelCaseMotion'
+
+    use 'morhetz/gruvbox'
+    use 'lifepillar/vim-gruvbox8'
+
+    use 'kdheepak/lazygit.nvim'
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use 'nvim-treesitter/nvim-treesitter-textobjects'
+    use 'aserebryakov/vim-todo-lists'
+    use 'tikhomirov/vim-glsl'
+
+    use {'junegunn/fzf', run = 'fzf#install()'}
+    use 'junegunn/fzf.vim'
 
     use {
         'neovim/nvim-lspconfig',
@@ -135,4 +148,9 @@ return require('packer').startup(function ()
     --    end
     --}
 
-end)
+end,
+config = {
+  display = {
+    open_fn = require('packer.util').float,
+  }
+}})

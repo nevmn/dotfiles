@@ -62,40 +62,42 @@ if maparg('<C-L>', 'n') ==# ''
     nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
 
-call plug#begin(stdpath('data') . '/plugged')
+"call plug#begin(stdpath('data') . '/plugged')
     "Plug 'tpope/vim-surround'
     "Plug 'tpope/vim-fugitive'
     "Plug 'airblade/vim-gitgutter'
-    Plug 'preservim/nerdtree'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
+    "Plug 'preservim/nerdtree'
+    "Plug 'Xuyuanp/nerdtree-git-plugin'
     "Plug 'easymotion/vim-easymotion'
-    Plug 'itchyny/lightline.vim'
-    Plug 'shinchu/lightline-gruvbox.vim'
+    "Plug 'itchyny/lightline.vim'
+    "Plug 'shinchu/lightline-gruvbox.vim'
     "Plug 'editorconfig/editorconfig-vim'
-    Plug 'nelsyeung/twig.vim'
-    Plug 'mattn/emmet-vim'
+    "Plug 'nelsyeung/twig.vim'
+    "Plug 'mattn/emmet-vim'
     "Plug 'honza/vim-snippets'
     "Plug 'pangloss/vim-javascript'
     "Plug 'posva/vim-vue'
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    Plug 'bkad/CamelCaseMotion'
+
+    "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    "Plug 'junegunn/fzf.vim'
+
+    "Plug 'bkad/CamelCaseMotion'
     "Plug 'majutsushi/tagbar'
-    Plug 'morhetz/gruvbox'
-    Plug 'lifepillar/vim-gruvbox8'
+    "Plug 'morhetz/gruvbox'
+    "Plug 'lifepillar/vim-gruvbox8'
     "Plug 'neovim/nvim-lspconfig'
     "Plug 'nvim-lua/completion-nvim'
     "Plug 'nvim-lua/popup.nvim'
     "Plug 'nvim-lua/plenary.nvim'
     "Plug 'nvim-lua/telescope.nvim'
-    Plug 'kdheepak/lazygit.nvim'
-    Plug 'nvim-treesitter/nvim-treesitter'
-    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-    Plug 'aserebryakov/vim-todo-lists'
-    Plug 'tikhomirov/vim-glsl'
-call plug#end()
+    "Plug 'kdheepak/lazygit.nvim'
+    "Plug 'nvim-treesitter/nvim-treesitter'
+    "Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+    "Plug 'aserebryakov/vim-todo-lists'
+    "Plug 'tikhomirov/vim-glsl'
+"call plug#end()
 
-let g:camelcasemotion_key = '<leader>'
+let g:camelcasemotion_key = ']'
 
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
