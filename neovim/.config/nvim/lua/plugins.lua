@@ -27,6 +27,8 @@ return require('packer').startup({function ()
     use 'morhetz/gruvbox'
     use 'lifepillar/vim-gruvbox8'
 
+    use 'norcalli/nvim-colorizer.lua'
+
     use 'kdheepak/lazygit.nvim'
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use 'nvim-treesitter/nvim-treesitter-textobjects'
@@ -148,9 +150,4 @@ return require('packer').startup({function ()
     --    end
     --}
 
-end,
-config = {
-  display = {
-    open_fn = require('packer.util').float,
-  }
-}})
+end})

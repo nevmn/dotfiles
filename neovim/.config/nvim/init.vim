@@ -167,4 +167,6 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
   },
 }
+
+require'colorizer'.setup();
 EOF
