@@ -38,61 +38,88 @@ return require('packer').startup({function ()
     use {'junegunn/fzf', run = 'fzf#install()'}
     use 'junegunn/fzf.vim'
 
+
     use {
         'neovim/nvim-lspconfig',
-        requires = {'nvim-lua/completion-nvim'},
+        requires = {
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/nvim-cmp',
+            'hrsh7th/cmp-vsnip',
+            'hrsh7th/vim-vsnip'
+        },
         config = function()
 
-            local on_attach_vim = function()
-              require'completion'.on_attach()
-            end
+            local cmp = require'cmp'
+
+            cmp.setup({
+                snippet = {
+                    expand = function(args)
+                        vim.fn["vsnip#anonymous"](args.body)
+                    end,
+                },
+                mapping = {
+                    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+                    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+                    ['<C-Space>'] = cmp.mapping.complete(),
+                    ['<C-e>'] = cmp.mapping.close(),
+                    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+                },
+                sources = {
+                    { name = 'nvim_lsp' },
+                    { name = 'buffer' }
+                }
+            })
 
             local nvim_lsp = require'lspconfig'
 
             nvim_lsp.intelephense.setup{
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
             nvim_lsp.cssls.setup{
                 cmd = { "css-languageserver", "--stdio" },
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
             nvim_lsp.dockerls.setup{
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
             nvim_lsp.html.setup{
                 cmd = { "html-languageserver", "--stdio" },
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
             nvim_lsp.jsonls.setup{
                 cmd = { "json-languageserver", "--stdio" },
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
             nvim_lsp.rust_analyzer.setup{
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
             nvim_lsp.vimls.setup{
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
             nvim_lsp.vuels.setup{
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
             nvim_lsp.tsserver.setup{
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
             nvim_lsp.clangd.setup{
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
             nvim_lsp.hls.setup{
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
             nvim_lsp.bashls.setup{
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
             nvim_lsp.yamlls.setup{
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
             nvim_lsp.dhall_lsp_server.setup{
-                on_attach = on_attach_vim
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+            }
+            nvim_lsp.csharp_ls.setup{
+                capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
             }
 
             local sumneko_root_path = vim.fn.stdpath('data')
@@ -134,20 +161,4 @@ return require('packer').startup({function ()
             }
         end
     }
-
-    use {
-        'glepnir/lspsaga.nvim',
-        config = function()
-            require'lspsaga'.init_lsp_saga()
-        end
-    }
-
-    --use {
-    --    'lewis6991/gitsigns.nvim',
-    --    requires = {'nvim-lua/plenary.nvim'},
-    --    config = function ()
-    --        require'gitsigns'.setup()
-    --    end
-    --}
-
 end})

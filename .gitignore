@@ -1,2 +1,1 @@
-neovim/.local/share/nvim/site/pack/packer/start/*
-neovim/.config/nvim/plugin/packer_compiled.vim
+neovim/.config/nvim/plugin/packer_compiled.lua
