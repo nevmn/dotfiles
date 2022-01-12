@@ -3,3 +3,5 @@
 	name = Maxim Neverov
 [pull]
 	rebase = true
+[diff]
+    algorithm=histogram
