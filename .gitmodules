@@ -1,3 +1,96 @@
-[submodule "neovim/.local/share/nvim/site/pack/vendor/start/packer.nvim"]
-	path = neovim/.local/share/nvim/site/pack/vendor/start/packer.nvim
-	url = https://github.com/wbthomason/packer.nvim.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/vim-easymotion"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/vim-surround"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/vim-fugitive"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/vim-gitgutter"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/nerdtree"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/nerdtree-git-plugin"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/lightline.vim"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/lightline-gruvbox.vim"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/lightline-gruvbox.vim
+	url = https://github.com/shinchu/lightline-gruvbox.vim.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/gruvbox"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/vim-gruvbox8"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/vim-gruvbox8
+	url = https://github.com/lifepillar/vim-gruvbox8.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/plenary.nvim"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/popup.nvim"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/popup.nvim
+	url = https://github.com/nvim-lua/popup.nvim.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/telescope.nvim"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/telescope-fzf-native.nvim"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/telescope-fzf-native.nvim
+	url = https://github.com/nvim-telescope/telescope-fzf-native.nvim.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/fzf"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/nvim-treesitter"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/nvim-treesitter-textobjects"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/nvim-treesitter-textobjects
+	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/fzf.vim"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/nvim-web-devicons"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/nvim-web-devicons
+	url = https://github.com/kyazdani42/nvim-web-devicons.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/CamelCaseMotion"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/CamelCaseMotion
+	url = https://github.com/bkad/CamelCaseMotion.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/nvim-colorizer.lua"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/nvim-colorizer.lua
+	url = https://github.com/norcalli/nvim-colorizer.lua.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/lazygit.nvim"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/lazygit.nvim
+	url = https://github.com/kdheepak/lazygit.nvim.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/emmet-vim"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/emmet-vim
+	url = https://github.com/nevmn/emmet-vim.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/twig.vim"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/twig.vim
+	url = https://github.com/nelsyeung/twig.vim.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/nvim-lspconfig"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/cmp-nvim-lsp"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/cmp-nvim-lsp
+	url = https://github.com/hrsh7th/cmp-nvim-lsp.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/cmp-buffer"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/cmp-buffer
+	url = https://github.com/hrsh7th/cmp-buffer.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/cmp-path"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/cmp-path
+	url = https://github.com/hrsh7th/cmp-path.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/cmp-cmdline"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/cmp-cmdline
+	url = https://github.com/hrsh7th/cmp-cmdline.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/nvim-cmp"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/nvim-cmp
+	url = https://github.com/hrsh7th/nvim-cmp.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/cmp-vsnip"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/cmp-vsnip
+	url = https://github.com/hrsh7th/cmp-vsnip.git
+[submodule "neovim/.local/share/nvim/site/pack/vendor/start/vim-vsnip"]
+	path = neovim/.local/share/nvim/site/pack/vendor/start/vim-vsnip
+	url = https://github.com/hrsh7th/vim-vsnip.git

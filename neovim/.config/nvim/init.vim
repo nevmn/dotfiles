@@ -141,8 +141,8 @@ nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 nnoremap <silent> gF    <cmd>lua vim.lsp.buf.formatting_sync()<CR>
 nnoremap <silent> gA    <cmd>lua vim.lsp.buf.code_action()<CR>
-nnoremap <silent> gnd   <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
-nnoremap <silent> gpd   <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> gnd   <cmd>lua vim.diagnostic.goto_next()<CR>
+nnoremap <silent> gpd   <cmd>lua vim.diagnostic.goto_prev()<CR>
 
 nnoremap <silent> <F3> :Files<CR>
 
@@ -159,13 +159,4 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 lua << EOF
 require('plugins')
-
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"php", "vue", "typescript", "javascript", "json", "yaml", "html", "regex", "css", "c", "jsdoc", "cpp", "toml", "rust", "haskell"},
-  highlight = {
-    enable = true,
-  },
-}
-
-require'colorizer'.setup();
 EOF
