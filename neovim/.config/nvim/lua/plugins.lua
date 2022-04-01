@@ -57,31 +57,33 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 local nvim_lsp = require('lspconfig')
 
 --nvim_lsp.intelephense.setup { capabilities = capabilities }
-nvim_lsp.psalm.setup { capabilities = capabilities }
+nvim_lsp.psalm.setup { capabilities }
 
-nvim_lsp.cssls.setup { cmd = { "css-languageserver", "--stdio" }, capabilities = capabilities }
+nvim_lsp.dockerls.setup { capabilities }
 
-nvim_lsp.dockerls.setup { capabilities = capabilities }
+nvim_lsp.cssls.setup { cmd = { "vscode-css-languageserver", "--stdio" }, capabilities }
 
-nvim_lsp.html.setup { cmd = { "html-languageserver", "--stdio" }, capabilities = capabilities }
+nvim_lsp.html.setup { cmd = { "vscode-html-languageserver", "--stdio" }, capabilities }
 
-nvim_lsp.jsonls.setup { cmd = { "json-languageserver", "--stdio" }, capabilities = capabilities }
+nvim_lsp.jsonls.setup { cmd = { "vscode-json-languageserver", "--stdio" }, capabilities }
 
-nvim_lsp.vimls.setup { capabilities = capabilities }
+nvim_lsp.vimls.setup { capabilities }
 
-nvim_lsp.vuels.setup { capabilities = capabilities }
+nvim_lsp.vuels.setup { capabilities }
 
-nvim_lsp.tsserver.setup { capabilities = capabilities }
+nvim_lsp.tsserver.setup { capabilities }
 
-nvim_lsp.clangd.setup { capabilities = capabilities }
+nvim_lsp.clangd.setup { capabilities }
 
-nvim_lsp.hls.setup { capabilities = capabilities }
+nvim_lsp.hls.setup { capabilities }
 
-nvim_lsp.bashls.setup { capabilities = capabilities }
+nvim_lsp.bashls.setup { capabilities }
 
-nvim_lsp.yamlls.setup { capabilities = capabilities }
+nvim_lsp.yamlls.setup { capabilities }
 
-nvim_lsp.csharp_ls.setup { capabilities = capabilities }
+nvim_lsp.csharp_ls.setup { capabilities }
+
+nvim_lsp.pylsp.setup { capabilities }
 
 local sumneko_root_path = vim.fn.stdpath('data')..'/site/pack/packer/start/nvim-lspconfig/lua/lspconfig/sumneko_lua.lua'
 nvim_lsp.sumneko_lua.setup {
