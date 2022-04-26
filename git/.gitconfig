@@ -1,7 +1,28 @@
 [user]
 	email = nevmn21@gmail.com
 	name = Maxim Neverov
+[core]
+  whitespace = blank-at-eol, space-before-tab, tab-in-indent, blank-at-eof
 [pull]
 	rebase = true
+  ff = only
+[rebase]
+  autoSquash = true
+[log]
+  date = iso8601
 [diff]
-    algorithm=histogram
+  algorithm = histogram
+  tool = lvimdiff
+  colorMoved = default
+  colorMovedWS = allow-indentation-change
+[grep]
+  lineNumber = true
+[merge]
+  tool = lvimdiff
+  conflictStyle = zdiff3
+[init]
+  defaultBranch = master
+[difftool "lvimdiff"]
+  cmd = "lvim -d \"$LOCAL\" \"$REMOTE\""
+[http "http://git.community.i2p"]
+  proxy = http://127.0.0.1:4444
