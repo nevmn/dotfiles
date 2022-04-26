@@ -101,7 +101,7 @@ plugins=(zsh-autosuggestions docker nvm fzf systemadmin git docker-compose)
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='nvim'
+  export EDITOR='lvim'
 fi
 
 # Compilation flags
