@@ -161,11 +161,25 @@ lvim.builtin.treesitter.highlight.enabled = true
 --     },
 -- }
 lvim.plugins = {
-  { "sainnhe/gruvbox-material" }
+  { "sainnhe/gruvbox-material" }, -- gruvbox theme
+  {
+    "kevinhwang91/rnvimr", -- ranger explorer window
+    cmd = "RnvimrToggle",
+    config = function()
+      vim.g.rnvimr_draw_border = 1
+      vim.g.rnvimr_pick_enable = 1
+      vim.g.rnvimr_bw_enable = 1
+    end,
+  },
+  { "bkad/CamelCaseMotion" },
+  { "nevmn/emmet-vim" },
+  { "nelsyeung/twig.vim" }
 }
 vim.g.gruvbox_material_background = "hard"
 vim.g.gruvbox_material_transparent_background = 1
 vim.g.gruvbox_material_palette = "mix"
+
+vim.g.camelcasemotion_key = ']'
 
 lvim.builtin.lualine.options.theme = "gruvbox-material"
 
