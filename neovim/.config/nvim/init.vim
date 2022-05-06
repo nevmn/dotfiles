@@ -46,6 +46,7 @@ set termguicolors
 set completeopt=menu,menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
 set shortmess+=c
+set relativenumber
 
 " enable Normal mode keys in ru layout
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz

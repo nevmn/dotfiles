@@ -85,6 +85,8 @@ nvim_lsp.csharp_ls.setup { capabilities }
 
 nvim_lsp.pylsp.setup { capabilities }
 
+nvim_lsp.gopls.setup { capabilities }
+
 local sumneko_root_path = vim.fn.stdpath('data')..'/site/pack/packer/start/nvim-lspconfig/lua/lspconfig/sumneko_lua.lua'
 nvim_lsp.sumneko_lua.setup {
     cmd = {
