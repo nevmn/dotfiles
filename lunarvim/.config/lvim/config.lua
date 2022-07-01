@@ -9,6 +9,8 @@ an executable
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 vim.opt.relativenumber = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
@@ -60,32 +62,32 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
+--lvim.builtin.nvimtree.show_icons.git = 0
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "javascript",
-  "jsdoc",
-  "json",
-  "lua",
-  "typescript",
-  "css",
-  "html",
-  "yaml",
-  "cmake",
-  "comment",
-  "cpp",
-  "dockerfile",
-  "go",
-  "make",
-  "markdown",
-  "php",
-  "phpdoc",
-  "scss",
-  "vim",
-  "vue"
+    "bash",
+    "c",
+    "javascript",
+    "jsdoc",
+    "json",
+    "lua",
+    "typescript",
+    "css",
+    "html",
+    "yaml",
+    "cmake",
+    "comment",
+    "cpp",
+    "dockerfile",
+    "go",
+    "make",
+    "markdown",
+    "php",
+    "phpdoc",
+    "scss",
+    "vim",
+    "vue"
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -161,19 +163,19 @@ lvim.builtin.treesitter.highlight.enabled = true
 --     },
 -- }
 lvim.plugins = {
-  { "sainnhe/gruvbox-material" }, -- gruvbox theme
-  {
-    "kevinhwang91/rnvimr", -- ranger explorer window
-    cmd = "RnvimrToggle",
-    config = function()
-      vim.g.rnvimr_draw_border = 1
-      vim.g.rnvimr_pick_enable = 1
-      vim.g.rnvimr_bw_enable = 1
-    end,
-  },
-  { "bkad/CamelCaseMotion" },
-  { "nevmn/emmet-vim" },
-  { "nelsyeung/twig.vim" }
+    { "sainnhe/gruvbox-material" }, -- gruvbox theme
+    {
+        "kevinhwang91/rnvimr", -- ranger explorer window
+        cmd = "RnvimrToggle",
+        config = function()
+            vim.g.rnvimr_draw_border = 1
+            vim.g.rnvimr_pick_enable = 1
+            vim.g.rnvimr_bw_enable = 1
+        end,
+    },
+    { "bkad/CamelCaseMotion" },
+    { "nevmn/emmet-vim" },
+    { "nelsyeung/twig.vim" },
 }
 vim.g.gruvbox_material_background = "hard"
 vim.g.gruvbox_material_transparent_background = 1
