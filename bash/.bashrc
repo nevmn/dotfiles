@@ -20,3 +20,8 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 
 source /usr/share/nvm/init-nvm.sh
+
+# pnpm
+export PNPM_HOME="/home/maxim/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

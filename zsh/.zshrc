@@ -127,7 +127,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 export TERMINAL=kitty
 
-export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.symfony/bin:$HOME/.yarn/bin:$HOME/.dotnet/tools:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$PATH"
 
 export HISTSIZE=10000
 export HISTFILESIZE=10000
@@ -178,3 +178,8 @@ HELP
   
   echo "${tags}"
 }
+
+# pnpm
+export PNPM_HOME="/home/maxim/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
