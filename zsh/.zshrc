@@ -87,7 +87,7 @@ ZSH_CUSTOM=/usr/share/zsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions docker nvm fzf systemadmin git docker-compose)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting docker nvm fzf systemadmin git docker-compose common-aliases sudo)
 
 
 # User configuration
@@ -133,7 +133,7 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 
 source $ZSH/oh-my-zsh.sh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -150,33 +150,6 @@ function enabletor() {
 
 function disabletor() {
     unset {http,https,all}_proxy
-}
-function dockertags() {
-  if [ $# -lt 1 ]
-  then
-  cat << HELP
-  
-  dockertags  --  list all tags for a Docker image on a remote registry.
-  
-  EXAMPLE: 
-      - list all tags for ubuntu:
-         dockertags ubuntu
-  
-      - list all php tags containing apache:
-         dockertags php apache
-  
-HELP
-  fi
-  
-  image="$1"
-  tags=`wget -q https://registry.hub.docker.com/v1/repositories/${image}/tags -O -  | sed -e 's/[][]//g' -e 's/"//g' -e 's/ //g' | tr '}' '\n'  | awk -F: '{print $3}'`
-  
-  if [ -n "$2" ]
-  then
-      tags=` echo "${tags}" | grep "$2" `
-  fi
-  
-  echo "${tags}"
 }
 
 # pnpm
