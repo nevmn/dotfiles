@@ -87,7 +87,7 @@ ZSH_CUSTOM=/usr/share/zsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions zsh-syntax-highlighting docker nvm fzf systemadmin git docker-compose common-aliases sudo)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting docker nvm fzf systemadmin git docker-compose common-aliases)
 
 
 # User configuration
@@ -126,6 +126,7 @@ set -o noclobber	# prevent overwrite of files
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 export TERMINAL=kitty
+export TIME_STYLE=long-iso
 
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$PATH"
 
