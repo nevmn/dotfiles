@@ -199,7 +199,7 @@ lvim.plugins = {
     { "nelsyeung/twig.vim" },
     {
         "s1n7ax/nvim-window-picker",
-        tag = "1.*",
+        version = "1.*",
         config = function()
             require("window-picker").setup({
                 autoselect_one = true,

@@ -128,7 +128,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export TERMINAL=kitty
 export TIME_STYLE=long-iso
 
-export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$HOME/go/bin:$PATH"
 
 export HISTSIZE=10000
 export HISTFILESIZE=10000
