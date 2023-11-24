@@ -62,11 +62,10 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 set $monitor $(swaymsg -t get_outputs -r | jq -r '. | map(.focused==true) | index(true)')
-set $menu dmenu_path | dmenu -i -m $monitor | xargs swaymsg exec --
-bindsym $mod+d exec $menu
-                                #-fn 'pango:monospace:pixelsize=15'
+set $dmenu dmenu -i -l 10 -fn 'pango:monospace:pixelsize=15' -m $monitor
+bindsym $mod+d exec dmenu_path | $dmenu | xargs swaymsg exec --
+bindsym $mod+Shift+d exec cliphist list | $dmenu | cliphist decode | wl-copy
 #bindsym $mod+Shift+d exec clipmenu -m $monitor
-bindsym $mod+Shift+d exec cliphist list | dmenu -i -l 5 -m $monitor | cliphist decode | wl-copy
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -176,9 +175,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # make window floating through workspaces
 bindsym $mod+Shift+f sticky toggle
 
-bindsym $mod+i exec --no-startup-id "maim -s -u | xclip -sel clip -t image/png"
-bindsym $mod+Ctrl+i exec --no-startup-id "flameshot gui"
-bindsym $mod+p exec --no-startup-id caja
+#bindsym $mod+i exec --no-startup-id "maim -s -u | xclip -sel clip -t image/png"
+bindsym $mod+i exec --no-startup-id grim -g "$(slurp)" - | wl-copy
+#bindsym $mod+Ctrl+i exec --no-startup-id "flameshot gui"
+bindsym $mod+p exec --no-startup-id nemo
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -209,6 +209,7 @@ bindsym $mod+r mode "resize"
 
 for_window [app_id="telegram"] floating enable
 for_window [app_id="keepassxc"] floating enable
+for_window [title="Picture-in-Picture"] floating enable
 for_window [title="Picture-in-Picture"] sticky enable
 
 assign [instance="jetbrains-idea"] $ws2
@@ -221,7 +222,7 @@ assign [instance="chromium"] $ws3
 # finds out, if available)
 bar {
         id bar-1
-        status_command i3status
+        swaybar_command waybar
         tray_output VGA-2
 }
 
@@ -229,6 +230,8 @@ input type:keyboard {
     xkb_layout us,ru
     xkb_options grp:alt_shift_toggle
 }
+
+include /etc/sway/config.d/*
 
 #exec_always --no-startup-id "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
 
