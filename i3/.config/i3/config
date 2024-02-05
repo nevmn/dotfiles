@@ -209,8 +209,7 @@ bindsym $mod+r mode "resize"
 
 for_window [app_id="telegram"] floating enable
 for_window [app_id="keepassxc"] floating enable
-for_window [title="Picture-in-Picture"] floating enable
-for_window [title="Picture-in-Picture"] sticky enable
+for_window [title="Picture-in-Picture"] floating enable, sticky enable
 
 assign [instance="jetbrains-idea"] $ws2
 assign [instance="jetbrains-clion"] $ws2
@@ -243,7 +242,7 @@ exec --no-startup-id "wl-paste --type text --watch cliphist store"
 exec --no-startup-id "wl-paste --type image --watch cliphist store"
 #exec --no-startup-id blueman-applet
 exec --no-startup-id dunst
-exec --no-startup-id Forkgram
+exec --no-startup-id "sh -c 'sleep 10; exec Forkgram'"
 exec --no-startup-id "chromium"
 exec --no-startup-id "firefox -P General"
 

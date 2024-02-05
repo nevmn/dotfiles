@@ -7,24 +7,11 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     "modules-center": [],
-    "modules-right": ["mpd", "wireplumber", "network", "disk#root", "disk#data", "cpu", "memory", "temperature", "backlight", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["mpd", "wireplumber", "network", "disk#root", "cpu", "memory", "backlight", "sway/language", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "sway/workspaces": {
+        "disable-scroll": true
+    },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -84,14 +71,10 @@
     },
     "disk#root": {
         "path": "/",
-        "format": "{used} / {total}"
-    },
-    "disk#data": {
-        "path": "/home/maxim/data",
-        "format": "{used} / {total}"
+        "format": " {used} / {total} 󰋊 "
     },
     "memory": {
-        "format": "{used} / {total} "
+        "format": " {used} / {total}  "
     },
     "temperature": {
         // "thermal-zone": 2,
