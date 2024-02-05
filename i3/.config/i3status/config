@@ -17,7 +17,7 @@ order += "wireless _first_"
 order += "ethernet _first_"
 # order += "battery all"
 order += "disk /"
-order += "disk /home/maxim/data"
+order += "disk /home"
 # order += "load"
 order += "cpu_usage"
 order += "memory"
@@ -48,7 +48,7 @@ disk "/" {
     format = "used:%used total:%total"
 }
 
-disk "/home/maxim/data" {
+disk "/home" {
     format = "used:%used total:%total"
 }
 
