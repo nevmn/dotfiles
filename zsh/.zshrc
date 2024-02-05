@@ -87,7 +87,7 @@ ZSH_CUSTOM=/usr/share/zsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions zsh-syntax-highlighting docker nvm fzf systemadmin git docker-compose common-aliases)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting extract docker nvm fzf systemadmin git docker-compose common-aliases command-not-found)
 
 
 # User configuration
@@ -135,6 +135,7 @@ export HISTFILESIZE=10000
 
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
+source /usr/share/doc/pkgfile/command-not-found.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
