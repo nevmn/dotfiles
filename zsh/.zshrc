@@ -137,6 +137,7 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
 source /usr/share/doc/pkgfile/command-not-found.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/nvm/init-nvm.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
