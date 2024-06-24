@@ -31,8 +31,11 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-#systemctl --user import-environment DISPLAY
+systemctl --user import-environment DISPLAY
 #source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+xset s off
+xset -dpms
+xset s noblank
 
 #xrandr --output VGA-1 --auto --output VGA-1-2 --auto --right-of VGA-1
 
