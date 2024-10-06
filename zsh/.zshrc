@@ -101,7 +101,7 @@ plugins=(zsh-autosuggestions zsh-syntax-highlighting extract docker nvm fzf syst
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='lvim'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
