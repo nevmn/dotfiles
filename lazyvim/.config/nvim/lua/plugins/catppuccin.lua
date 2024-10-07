@@ -107,7 +107,7 @@ return {
             NeotestExpandMarker = { fg = colors.yellow },
             NeotestWinSelect = { fg = colors.yellow, bold = true },
             NeotestTest = { fg = colors.subtext2 },
-            NormalFloat = { bg = colors.base },
+            NormalFloat = { bg = colors.crust },
             Pmenu = { bg = colors.mantle, fg = "" },
             PmenuSel = { bg = colors.surface0, fg = "" },
             TelescopePreviewBorder = { bg = colors.crust, fg = colors.crust },
