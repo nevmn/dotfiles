@@ -12,18 +12,18 @@
   date = iso8601
 [diff]
   algorithm = histogram
-  tool = lvimdiff
+  tool = nvimdiff
   colorMoved = default
   colorMovedWS = allow-indentation-change
 [grep]
   lineNumber = true
 [merge]
-  tool = lvimdiff
+  tool = nvimdiff
   conflictStyle = zdiff3
 [init]
   defaultBranch = master
-[difftool "lvimdiff"]
-  cmd = "lvim -d \"$LOCAL\" \"$REMOTE\""
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [http "http://git.community.i2p"]
   proxy = http://127.0.0.1:4444
 [filter "lfs"]
