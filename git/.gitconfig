@@ -20,8 +20,6 @@
 [merge]
   tool = nvimdiff
   conflictStyle = zdiff3
-[init]
-  defaultBranch = master
 [difftool "nvimdiff"]
   cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [http "http://git.community.i2p"]
