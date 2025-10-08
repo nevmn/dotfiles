@@ -9,13 +9,17 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
+if [[ -r "/usr/share/oh-my-zsh/" ]]; then
+  ZSH=/usr/share/oh-my-zsh/
+else
+  ZSH=/usr/local/share/ohmyzsh/
+fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -80,15 +84,18 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_FZF_KEY_BINDINGS="true"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=/usr/share/zsh
+if [[ -r "/usr/share/zsh" ]]; then
+  ZSH_CUSTOM=/usr/share/zsh
+else
+  ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
+fi
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions zsh-syntax-highlighting extract docker nvm fzf systemadmin git docker-compose common-aliases command-not-found)
-
+plugins=(zsh-autosuggestions zsh-syntax-highlighting extract docker nvm fzf fzf-tab systemadmin git docker-compose common-aliases command-not-found)
 
 # User configuration
 
@@ -125,7 +132,7 @@ set -o noclobber	# prevent overwrite of files
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
-export TERMINAL=kitty
+export TERMINAL=alacritty
 export TIME_STYLE=long-iso
 
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$HOME/go/bin:$PATH"
@@ -134,10 +141,11 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 
 source $ZSH/oh-my-zsh.sh
-source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
-source /usr/share/doc/pkgfile/command-not-found.zsh
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/nvm/init-nvm.sh
+if command -v pacman > /dev/null; then
+  source /usr/share/doc/pkgfile/command-not-found.zsh
+  source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+  source /usr/share/nvm/init-nvm.sh
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
