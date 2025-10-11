@@ -1,10 +1,10 @@
 [user]
-	email = nevmn21@gmail.com
-	name = Maxim Neverov
+  email = nevmn21@gmail.com
+  name = Maxim Neverov
 [core]
   whitespace = blank-at-eol, space-before-tab, tab-in-indent, blank-at-eof
 [pull]
-	rebase = true
+  rebase = true
   ff = only
 [rebase]
   autoSquash = true
@@ -25,9 +25,9 @@
 [http "http://git.community.i2p"]
   proxy = http://127.0.0.1:4444
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [color]
-	ui = auto
+  ui = auto
