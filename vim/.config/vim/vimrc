@@ -1,0 +1,27 @@
+set nocompatible
+
+set autocomplete
+
+set autoindent
+set smartindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
+set autoread
+set autowrite
+
+set ruler
+set number
+set relativenumber
+
+set background=dark
+
+filetype off
+
+filetype plugin indent on
+
+syntax on
+
+nnoremap <Space> <Nop>
+let mapleader=" "
