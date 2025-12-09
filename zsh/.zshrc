@@ -143,7 +143,6 @@ export HISTFILESIZE=10000
 source $ZSH/oh-my-zsh.sh
 if command -v pacman > /dev/null; then
   source /usr/share/doc/pkgfile/command-not-found.zsh
-  source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
   source /usr/share/nvm/init-nvm.sh
 fi
 
@@ -174,6 +173,7 @@ export QT_STYLE_OVERRIDE=Adwaita-Dark
 
 export RUSTC_WRAPPER=sccache
 
+export GOTELEMETRY=off
 export GOPROXY=direct
 
 export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
