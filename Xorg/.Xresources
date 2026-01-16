@@ -1,84 +1,58 @@
-Xft.dpi:	96
-Xft.antialias:	true
-Xft.hinting:	true
-Xft.hintstyle:	hintslight
-Xft.rgba:	rgb
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+Xft.rgba:       rgb
 
-*background: #1d2021
-! medium contrast: *background: #282828
-! soft contrast: *background: #32302f
-*foreground: #ebdbb2
-! Black + DarkGrey
-*color0:  #282828
-*color8:  #928374
-! DarkRed + Red
-*color1:  #cc241d
-*color9:  #fb4934
-! DarkGreen + Green
-*color2:  #98971a
-*color10: #b8bb26
-! DarkYellow + Yellow
-*color3:  #d79921
-*color11: #fabd2f
-! DarkBlue + Blue
-*color4:  #458588
-*color12: #83a598
-! DarkMagenta + Magenta
-*color5:  #b16286
-*color13: #d3869b
-! DarkCyan + Cyan
-*color6:  #689d6a
-*color14: #8ec07c
-! LightGrey + White
-*color7:  #a89984
-*color15: #ebdbb2
+! special
+*.foreground:   #c5c9c5
+*.background:   #181616
+*.cursorColor:  #c5c9c5
 
-XTerm*faceName: FiraCode Nerd Font
-XTerm*faceSize: 12
-XTerm*antialias: true
-XTerm*renderFont: true
-XTerm*boldMode: false
-XTerm*background: #1d2021
-XTerm*foreground: #ebdbb2
-XTerm*color0:  #282828
-XTerm*color8:  #928374
-XTerm*color1:  #cc241d
-XTerm*color9:  #fb4934
-XTerm*color2:  #98971a
-XTerm*color10: #b8bb26
-XTerm*color3:  #d79921
-XTerm*color11: #fabd2f
-XTerm*color4:  #458588
-XTerm*color12: #83a598
-XTerm*color5:  #b16286
-XTerm*color13: #d3869b
-XTerm*color6:  #689d6a
-XTerm*color14: #8ec07c
-XTerm*color7:  #a89984
-XTerm*color15: #ebdbb2
+! black
+*.color0:       #0d0c0c
+*.color8:       #a6a69c
 
-UXTerm*faceName: FiraCode Nerd Font
-UXTerm*faceSize: 12
-UXTerm*antialias: true
-UXTerm*renderFont: true
-UXTerm*boldMode: false
-UXTerm*background: #1d2021
-UXTerm*foreground: #ebdbb2
-UXTerm*color0:  #282828
-UXTerm*color8:  #928374
-UXTerm*color1:  #cc241d
-UXTerm*color9:  #fb4934
-UXTerm*color2:  #98971a
-UXTerm*color10: #b8bb26
-UXTerm*color3:  #d79921
-UXTerm*color11: #fabd2f
-UXTerm*color4:  #458588
-UXTerm*color12: #83a598
-UXTerm*color5:  #b16286
-UXTerm*color13: #d3869b
-UXTerm*color6:  #689d6a
-UXTerm*color14: #8ec07c
-UXTerm*color7:  #a89984
-UXTerm*color15: #ebdbb2
+! red
+*.color1:       #c4746e
+*.color9:       #e46876
+
+! green
+*.color2:       #8a9a7b
+*.color10:      #87a987
+
+! yellow
+*.color3:       #c4b28a
+*.color11:      #e6c384
+
+! blue
+*.color4:       #8ba4b0
+*.color12:      #7fb4ca
+
+! magenta
+*.color5:       #a292a3
+*.color13:      #938aa9
+
+! cyan
+*.color6:       #8ea4a2
+*.color14:      #7aa89f
+
+! white
+*.color7:       #c8c093
+*.color15:      #c5c9c5
+
+XTerm*faceName:         FiraCode Nerd Font
+XTerm*faceSize:         11
+XTerm*antialias:        true
+XTerm*renderFont:       true
+XTerm*boldMode:         false
+XTerm*fullscreen:       never
+XTerm*omitTranslation:  fullscreen
+
+UXTerm*faceName:    FiraCode Nerd Font
+UXTerm*faceSize:    12
+UXTerm*antialias:   true
+UXTerm*renderFont:  true
+UXTerm*boldMode:    false
 
 Xcursor*theme: Adwaita
