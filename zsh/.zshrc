@@ -95,7 +95,7 @@ fi
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions zsh-syntax-highlighting extract docker nvm fzf fzf-tab systemadmin git docker-compose common-aliases command-not-found)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting extract docker nvm fzf systemadmin git docker-compose common-aliases command-not-found)
 
 # User configuration
 
