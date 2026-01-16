@@ -29,7 +29,8 @@ xset -b
 
 # Enable zapping (C-A-<Bksp> kills X)
 setxkbmap -option terminate:ctrl_alt_bksp
-
+# Alt+Shift toggles locales
+setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle
 
 # Enforce correct locales from the beginning:
 # LC_ALL is unset since it overwrites everything

@@ -215,15 +215,15 @@ bar {
         status_command i3status
 }
 
-exec_always --no-startup-id "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
+#exec_always --no-startup-id "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
 
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #exec --no-startup-id gxkb
 #exec_always --no-startup-id $HOME/.config/picom/launch.sh
 #exec --no-startup-id clipmenud
 #exec --no-startup-id blueman-applet
 #exec --no-startup-id dunst
-exec --no-startup-id zen-browser
+exec --no-startup-id firefox
 exec --no-startup-id forkgram
 exec --no-startup-id intellij-idea-ultimate-edition
 exec --no-startup-id chromium
