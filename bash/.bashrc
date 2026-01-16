@@ -12,7 +12,7 @@ shopt -s checkwinsize	# line wrap on window resize
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
-export TERMINAL=kitty
+export TERMINAL=xterm
 
 export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 
@@ -34,3 +34,7 @@ export EDITOR=nvim
 
 export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
+
+if [ -x "$(command -v tmux)" ] && [ -z "$TMUX" ] && [ "$TERM" = "xterm" ]; then
+    exec tmux new-session -A -s "$USER"
+fi
