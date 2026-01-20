@@ -4,27 +4,42 @@ Xft.hinting:    true
 Xft.hintstyle:  hintslight
 Xft.rgba:       rgb
 
-*.background: #000000
-*.foreground: #c1c1c1
-*.cursorColor:  #c1c1c1
-*.color0: #000000
-*.color1: #5f8787
-*.color2: #c1c1c1
-*.color3: #888888
-*.color4: #aaaaaa
-*.color5: #999999
-*.color6: #ffffff
-*.color7: #c1c1c1
-*.color8: #505050
-*.color9: #5f8787
-*.color10: #c1c1c1
-*.color11: #888888
-*.color12: #aaaaaa
-*.color13: #FFFFFF
-*.color14: #FFFFFF
-*.color15: #c1c1c1
-*.color16: #aaaaaa
-*.color17: #5f8787
+! special
+*.foreground:   #c5c9c5
+*.background:   #181616
+*.cursorColor:  #c5c9c5
+
+! black
+*.color0:       #0d0c0c
+*.color8:       #a6a69c
+
+! red
+*.color1:       #c4746e
+*.color9:       #e46876
+
+! green
+*.color2:       #8a9a7b
+*.color10:      #87a987
+
+! yellow
+*.color3:       #c4b28a
+*.color11:      #e6c384
+
+! blue
+*.color4:       #8ba4b0
+*.color12:      #7fb4ca
+
+! magenta
+*.color5:       #a292a3
+*.color13:      #938aa9
+
+! cyan
+*.color6:       #8ea4a2
+*.color14:      #7aa89f
+
+! white
+*.color7:       #c8c093
+*.color15:      #c5c9c5
 
 XTerm*faceName:         FiraCode Nerd Font
 XTerm*faceSize:         11
