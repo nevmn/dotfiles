@@ -1,18 +1,13 @@
 return {
   {
-    "rebelot/kanagawa.nvim",
-    opts = {
-      theme = "dragon",
-      background = {
-        dark = "dragon",
-      },
-    },
+    "metalelf0/black-metal-theme-neovim",
   },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa",
+      -- Can be one of: bathory | burzum | dark-funeral | darkthrone | emperor | gorgoroth | immortal | impaled-nazarene | khold | marduk | mayhem | nile | taake | thyrfing | venom | windir
+      colorscheme = "darkthrone",
     },
   },
 }
