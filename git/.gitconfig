@@ -8,6 +8,8 @@
   ff = only
 [rebase]
   autoSquash = true
+[rerere]
+  enabled = true
 [log]
   date = iso8601
 [diff]
@@ -22,8 +24,6 @@
   conflictStyle = zdiff3
 [difftool "nvimdiff"]
   cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
-[http "http://git.community.i2p"]
-  proxy = http://127.0.0.1:4444
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
