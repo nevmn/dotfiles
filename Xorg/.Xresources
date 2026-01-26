@@ -41,18 +41,11 @@ Xft.rgba:       rgb
 *.color7:       #c8c093
 *.color15:      #c5c9c5
 
-XTerm*faceName:         FiraCode Nerd Font
+XTerm*faceName:         FiraCode Nerd Font Mono Med
 XTerm*faceSize:         11
 XTerm*antialias:        true
 XTerm*renderFont:       true
-XTerm*boldMode:         false
 XTerm*fullscreen:       never
 XTerm*omitTranslation:  fullscreen
-
-UXTerm*faceName:    FiraCode Nerd Font
-UXTerm*faceSize:    12
-UXTerm*antialias:   true
-UXTerm*renderFont:  true
-UXTerm*boldMode:    false
 
 Xcursor*theme: Adwaita
