@@ -36,5 +36,5 @@ export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
 if [ -x "$(command -v tmux)" ] && [ -z "$TMUX" ] && [ "$TERM" = "xterm" ]; then
-    exec tmux new-session -A -s "$USER"
+    exec tmux new-session -A -s "main"
 fi

@@ -4,7 +4,7 @@ Xft.hinting:    true
 Xft.hintstyle:  hintslight
 Xft.rgba:       rgb
 
-! special
+!special
 *.foreground:   #c5c9c5
 *.background:   #181616
 *.cursorColor:  #c5c9c5
@@ -41,8 +41,7 @@ Xft.rgba:       rgb
 *.color7:       #c8c093
 *.color15:      #c5c9c5
 
-XTerm*faceName:         FiraCode Nerd Font Mono Med
-XTerm*faceSize:         11
+XTerm*faceName:         FiraCode Nerd Font:size=11
 XTerm*antialias:        true
 XTerm*renderFont:       true
 XTerm*fullscreen:       never
