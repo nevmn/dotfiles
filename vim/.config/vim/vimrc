@@ -7,21 +7,41 @@ set smartindent
 set expandtab
 set tabstop=4
 set shiftwidth=4
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+set lazyredraw
+set showmatch
+set matchtime=2
 
 set autoread
+autocmd FocusGained,BufEnter * silent! checktime
+
 set autowrite
 
-set ruler
 set number
 set relativenumber
+set ruler
+set scrolloff=7
+
+set wildmenu
+set wildignore=*.o,*~,*.pyc
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 
 set background=dark
+
+set hidden
 
 filetype off
 
 filetype plugin indent on
 
-syntax on
+syntax enable
 
 nnoremap <Space> <Nop>
 let mapleader=" "
+
+nmap <leader>w :w<CR>
+nmap <c-s> :w<CR>
+imap <c-s> <ESC>:w<CR>a
