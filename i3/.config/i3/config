@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:FiraCode Nerd Font 9
+font pango:FiraCode Nerd Font medium 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -59,7 +59,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-set $dmenu -i -fn 'FiraCode Nerd Font:size=12' -nb '#181616' -nf '#c5c9c5' -sb '#a6a69c' -sf '#181616'
+set $dmenu -i -fn 'FiraCode Nerd Font:weight=medium:size=12' -nb '#1f1f1f' -nf '#d4d4d4' -sb '#56b6c2' -sf '#1f1f1f'
 bindsym $mod+d exec --no-startup-id dmenu_run $dmenu
 bindsym $mod+Shift+d exec --no-startup-id clipmenu $dmenu
 # A more modern dmenu replacement is rofi:
@@ -209,10 +209,51 @@ assign [class="TelergamDesktop"] $ws1
 assign [class="jetbrains-idea"] $ws2
 assign [class="Chromium"] $ws3
 
+set_from_resource $color0      i3wm.color0      #1f1f1f
+set_from_resource $color1      i3wm.color1      #f44747
+set_from_resource $color2      i3wm.color2      #608b4e
+set_from_resource $color3      i3wm.color3      #dcdcaa
+set_from_resource $color4      i3wm.color4      #569cd6
+set_from_resource $color5      i3wm.color5      #c678dd
+set_from_resource $color6      i3wm.color6      #56b6c2
+set_from_resource $color7      i3wm.color7      #d4d4d4
+set_from_resource $color8      i3wm.color8      #808080
+set_from_resource $color9      i3wm.color9      #f44747
+set_from_resource $color10     i3wm.color10     #608b4e
+set_from_resource $color11     i3wm.color11     #dcdcaa
+set_from_resource $color12     i3wm.color12     #569cd6
+set_from_resource $color13     i3wm.color13     #c678dd
+set_from_resource $color14     i3wm.color14     #56b6c2
+set_from_resource $color15     i3wm.color15     #d4d4d4
+set_from_resource $foreground  i3wm.foreground  #d4d4d4
+set_from_resource $background  i3wm.background  #1f1f1f
+set_from_resource $cursorColor i3wm.cursorColor #d4d4d4
+
+# class                  border  bg      text    indicator child border
+client.focused           $color6 $color6 $color0 $color6   $color8
+client.focused_inactive  $color8 $color8 $color0 $color8   $color8
+client.unfocused         $color0 $color0 $color7 $color8   $color8
+client.focused_tab_title $color6 $color0 $color6
+client.urgent            $color3 $color0 $color3 $color8   $color8
+client.placeholder       $color6 $color0 $color6 $color6   $color8
+
+client.background $color6
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+  status_command i3status
+  colors {
+    background         $background
+    statusline         $color7
+    separator          $color8
+    #                  border  bg      text
+    focused_workspace  $color6 $color6 $color0
+    active_workspace   $color8 $color8 $color0
+    inactive_workspace $color0 $color0 $color8
+    urgent_workspace   $color3 $color3 $color0
+    binding_mode       $color5 $color5 $color0
+  }
 }
 
 exec_always --no-startup-id "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
