@@ -149,7 +149,7 @@ set -o noclobber	# prevent overwrite of files
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
-export TERMINAL=alacritty
+export TERMINAL=xterm
 export TIME_STYLE=long-iso
 
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$HOME/go/bin:$PATH"
