@@ -261,6 +261,7 @@ exec_always --no-startup-id "setxkbmap -model pc104 -layout us,ru -variant ,, -o
 #exec --no-startup-id clipmenud
 #exec --no-startup-id blueman-applet
 #exec --no-startup-id dunst
-exec --no-startup-id firefox
-exec --no-startup-id intellij-idea-ultimate-edition
-exec --no-startup-id chromium
+#exec --no-startup-id firefox
+#exec --no-startup-id forkgram
+#exec --no-startup-id intellij-idea-ultimate-edition
+#exec --no-startup-id chromium
