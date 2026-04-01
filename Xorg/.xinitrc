@@ -53,10 +53,10 @@ dunst &
 gxkb &
 pasystray &
 
-#xrandr --output VGA-1 --auto --output VGA-1-2 --auto --right-of VGA-1
+xrandr --output DP-0 --auto --output HDMI-0 --auto --left-of DP-0
 
 # for file dialog to work
-systemctl --user import-environment DISPLAY
-dbus-update-activation-environment --systemd DISPLAY
+# systemctl --user import-environment DISPLAY
+# dbus-update-activation-environment --systemd DISPLAY
 
 exec i3

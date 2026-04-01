@@ -100,7 +100,7 @@ fi
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(extract nvm fzf systemadmin common-aliases command-not-found colored-man-pages)
+plugins=(extract fzf systemadmin common-aliases command-not-found colored-man-pages)
 if [[ -r "/usr/local/share/zsh-autosuggestions" ]]; then
     source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 else
@@ -125,7 +125,11 @@ fi
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='nvim'
+  if [[ "$OSTYPE" == freebsd* ]]; then
+      export EDITOR='vim'
+  else
+      export EDITOR='nvim'
+  fi
 fi
 
 # Compilation flags
@@ -145,7 +149,7 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
-set -o noclobber	# prevent overwrite of files
+set -o noclobber    # prevent overwrite of files
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 

@@ -7,8 +7,8 @@
 
 PS1='[\u@\h \W]\$ '
 
-set -o noclobber	# prevent overwrite of files
-shopt -s checkwinsize	# line wrap on window resize
+set -o noclobber    # prevent overwrite of files
+shopt -s checkwinsize   # line wrap on window resize
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
@@ -30,11 +30,11 @@ export GTK_THEME=Adwaita:dark
 export GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
 export QT_STYLE_OVERRIDE=Adwaita-Dark
 
-export EDITOR=nvim
+export EDITOR=vim
 
 export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
-if [[ -x "$(command -v tmux)" && -z "$TMUX" && ( "$TERM" == "xterm" || "$TERM" == "alacritty" ) ]]; then
+if [[ -x "$(command -v tmux)" && -z "$TMUX" && ( "$TERMINAL" == "xterm" || "$TERMINAL" == "alacritty" ) ]]; then
     exec tmux new-session -A -s "main"
 fi
