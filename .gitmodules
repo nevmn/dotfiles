@@ -1,0 +1,6 @@
+[submodule "vim/.config/vim/pack/vendor/start/vim-surround"]
+	path = vim/.config/vim/pack/vendor/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "vim/.config/vim/pack/vendor/start/nerdtree"]
+	path = vim/.config/vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
