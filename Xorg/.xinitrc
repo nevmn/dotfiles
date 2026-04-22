@@ -55,4 +55,8 @@ pasystray &
 
 #xrandr --output VGA-1 --auto --output VGA-1-2 --auto --right-of VGA-1
 
+# for file dialog to work
+systemctl --user import-environment DISPLAY
+dbus-update-activation-environment --systemd DISPLAY
+
 exec i3
