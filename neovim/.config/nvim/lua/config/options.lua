@@ -3,5 +3,5 @@
 -- Add any additional options here
 vim.g.autoformat = false
 -- vim.g.lazyvim_picker = "telescope"
--- vim.g.lazyvim_php_lsp = "intelephense"
+vim.g.lazyvim_php_lsp = "intelephense"
 vim.o.shell = "zsh"
