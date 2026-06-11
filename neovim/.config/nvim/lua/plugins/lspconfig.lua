@@ -1,19 +1,23 @@
 return {
-	{
-		"neovim/nvim-lspconfig",
-		opts = {
-			servers = {
-				--intelephense = {
-				--	settings = {
-				--		intelephense = {
-				--			format = {
-				--				braces = "k&r",
-				--			},
-				--		},
-				--	},
-				--},
-				phpactor = { mason = false },
-			},
-		},
-	},
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        --intelephense = {
+        --	settings = {
+        --		intelephense = {
+        --			format = {
+        --				braces = "k&r",
+        --			},
+        --		},
+        --	},
+        --},
+        phpactor = { mason = false },
+      },
+    },
+  },
+
+  {
+    "rluba/jai.vim",
+  },
 }
