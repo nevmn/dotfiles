@@ -100,7 +100,7 @@ fi
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(extract docker nvm fzf systemadmin git docker-compose common-aliases command-not-found)
+plugins=(extract nvm fzf systemadmin common-aliases command-not-found colored-man-pages)
 if [[ -r "/usr/local/share/zsh-autosuggestions" ]]; then
     source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 else
