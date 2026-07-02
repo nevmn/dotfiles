@@ -166,7 +166,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Shift+f sticky toggle
 
 bindsym $mod+i      exec --no-startup-id "maim -s -u | xclip -sel clip -t image/png"
-bindsym $mod+Ctrl+i exec --no-startup-id "flameshot gui"
+bindsym $mod+Ctrl+i exec --no-startup-id "maim -s -u | xclip -sel clip -t image/png && ocrdesktop -C -c"
 bindsym $mod+p      exec --no-startup-id nemo
 
 # resize window (you can also use the mouse for that)
@@ -199,13 +199,10 @@ bindsym $mod+r mode "resize"
 for_window [id="keepassxc"] floating enable
 for_window [window_role="PictureInPicture"] floating enable
 for_window [window_role="PictureInPicture"] sticky enable
-for_window [class="zen"] layout tabbed
 for_window [class="firefox"] layout tabbed
 for_window [class="jetbrains-idea"] layout tabbed
 
-assign [class="zen"] $ws1
 assign [class="firefox"] $ws1
-assign [class="TelergamDesktop"] $ws1
 assign [class="jetbrains-idea"] $ws2
 assign [class="Chromium"] $ws3
 
@@ -265,6 +262,5 @@ exec_always --no-startup-id "setxkbmap -model pc104 -layout us,ru -variant ,, -o
 #exec --no-startup-id blueman-applet
 #exec --no-startup-id dunst
 exec --no-startup-id firefox
-exec --no-startup-id forkgram
 exec --no-startup-id intellij-idea-ultimate-edition
 exec --no-startup-id chromium
