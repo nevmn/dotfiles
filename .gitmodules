@@ -16,3 +16,6 @@
 [submodule "vim/.config/vim/pack/vendor/start/nerdcommenter"]
 	path = vim/.config/vim/pack/vendor/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
+[submodule "vim/.config/vim/pack/vendor/start/CamelCaseMotion"]
+	path = vim/.config/vim/pack/vendor/start/CamelCaseMotion
+	url = https://github.com/bkad/CamelCaseMotion
