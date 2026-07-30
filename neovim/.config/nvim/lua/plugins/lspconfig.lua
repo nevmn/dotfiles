@@ -13,17 +13,25 @@ return {
         --	},
         --},
         phpactor = { mason = false },
+        lua_ls = { mason = false },
+        marksman = { mason = false },
+        neocmake = { mason = false },
+        clangd = {
+          mason = false,
+          cmd = { "clangd19" },
+        },
       },
     },
   },
 
   {
     "mason-org/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "pint",
-      },
-    },
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, { "pint" })
+      opts.ensure_installed = vim.tbl_filter(function(pkg)
+        return pkg ~= "stylua" and pkg ~= "shfmt" and pkg ~= "golangci-lint" and pkg ~= "codelldb"
+      end, opts.ensure_installed or {})
+    end,
   },
 
   {
