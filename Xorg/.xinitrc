@@ -52,6 +52,7 @@ clipmenud &
 dunst &
 gxkb &
 pasystray &
+numlockx on &
 
 xrandr --output DP-0 --auto --output HDMI-0 --auto --left-of DP-0
 
