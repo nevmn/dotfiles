@@ -52,6 +52,7 @@ clipmenud &
 dunst &
 gxkb &
 pasystray &
+numlockx on &
 
 #xrandr --output VGA-1 --auto --output VGA-1-2 --auto --right-of VGA-1
 
