@@ -156,7 +156,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export TERMINAL=alacritty
 export TIME_STYLE=long-iso
 
-export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$HOME/go/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin:$PATH"
 
 export HISTSIZE=10000
 export HISTFILESIZE=10000
@@ -164,7 +164,6 @@ export HISTFILESIZE=10000
 source $ZSH/oh-my-zsh.sh
 if command -v pacman > /dev/null; then
   source /usr/share/doc/pkgfile/command-not-found.zsh
-  source /usr/share/nvm/init-nvm.sh
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -183,19 +182,12 @@ function disabletor() {
     unset {http,https,all}_proxy
 }
 
-# pnpm
-export PNPM_HOME="/home/maxim/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
-export GTK_THEME=Adwaita:dark
-export GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
-export QT_STYLE_OVERRIDE=Adwaita-Dark
-
-export RUSTC_WRAPPER=sccache
+#export GTK_THEME=Adwaita:dark
+#export GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
+#export QT_STYLE_OVERRIDE=Adwaita-Dark
 
 export GOTELEMETRY=off
 export GOPROXY=direct
 
-export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+#export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R --mouse '

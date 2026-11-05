@@ -19,20 +19,13 @@ export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 export HISTSIZE=10000
 export HISTFILESIZE=10000
 
-source /usr/share/nvm/init-nvm.sh
-
-# pnpm
-export PNPM_HOME="/home/maxim/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
-export GTK_THEME=Adwaita:dark
-export GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
-export QT_STYLE_OVERRIDE=Adwaita-Dark
+#export GTK_THEME=Adwaita:dark
+#export GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
+#export QT_STYLE_OVERRIDE=Adwaita-Dark
 
 export EDITOR=vim
 
-export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+#export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
 if [[ -x "$(command -v tmux)" && -z "$TMUX" && ( "$TERMINAL" == "xterm" || "$TERMINAL" == "alacritty" ) ]]; then
