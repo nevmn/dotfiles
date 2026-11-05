@@ -51,7 +51,7 @@ xsetroot -solid "#1d2021"
 clipmenud &
 dunst &
 gxkb &
-pasystray &
+volumeicon &
 numlockx on &
 
 xrandr --output DP-0 --auto --output HDMI-0 --auto --left-of DP-0
